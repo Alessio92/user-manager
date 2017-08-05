@@ -1,0 +1,11 @@
+.edit-user-form {
+	width: 500px;
+}
+
+.flex{
+	display: flex;
+}
+
+.full-width {
+	flex: 1;
+}

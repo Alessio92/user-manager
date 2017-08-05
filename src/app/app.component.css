@@ -1,0 +1,8 @@
+#main{
+	text-align: center;
+	min-width: 1000px;
+}
+
+.mat-cell, .mat-header-cell {
+    flex: 1;
+}

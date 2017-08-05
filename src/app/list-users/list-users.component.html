@@ -1,0 +1,53 @@
+<div class="table-container mat-elevation-z8">
+  <md-table #table [dataSource]="userDataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- ID Column
+    <ng-container cdkColumnDef="id">
+      <md-header-cell *cdkHeaderCellDef> ID </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.id}} </md-cell>
+    </ng-container>
+    -->
+
+
+    <!-- Name Column -->
+    <ng-container cdkColumnDef="name">
+      <md-header-cell *cdkHeaderCellDef> Name </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.name}} </md-cell>
+    </ng-container>
+
+
+    <!-- Surname Column -->
+    <ng-container cdkColumnDef="surname">
+      <md-header-cell *cdkHeaderCellDef> Surname </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.surname}} </md-cell>
+    </ng-container>
+
+
+    <!-- Email Column -->
+    <ng-container cdkColumnDef="email">
+      <md-header-cell *cdkHeaderCellDef> Email </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.email}} </md-cell>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container cdkColumnDef="action">
+      <md-header-cell *cdkHeaderCellDef class="mat-header-cell-1-3"></md-header-cell>
+      <md-cell *cdkCellDef="let row" class="mat-cell-1-3">
+        <button md-icon-button aria-label="Edit" (click)="edit(row.id)"><md-icon aria-hidden="true">edit</md-icon></button>
+        <button md-icon-button aria-label="Delete" (click)="delete(row.id)"><md-icon aria-hidden="true">delete</md-icon></button>
+      </md-cell>
+    </ng-container>
+
+    <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
+
+  <div class="no_row" *ngIf="isEmptyDataSource()">
+    <span>No rows found.</span>
+  </div>
+</div>
+
+<button class="add_user_button" md-fab aria-label="Add" (click)="add()"><md-icon aria-hidden="true">add</md-icon></button>

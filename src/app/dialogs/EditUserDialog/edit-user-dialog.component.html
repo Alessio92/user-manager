@@ -1,0 +1,9 @@
+<h2 md-dialog-title *ngIf="data.user.id == 0"><b>Create new user</b></h2>
+<h2 md-dialog-title *ngIf="data.user.id > 0"><b>Edit {{data.user.name}}</b></h2>
+<md-dialog-content>
+	<edit-user-form #edituserformcomponent [user]="data.user"></edit-user-form>
+</md-dialog-content>
+<md-dialog-actions>
+	<button md-button md-dialog-close>Cancel</button>	
+	<button md-raised-button color="primary" [md-dialog-close]="getUser()" [disabled]="!checkNestedFormIsValid()" >Save</button>
+</md-dialog-actions>

@@ -1,0 +1,6 @@
+md-dialog-title{
+	font-weight: bold;
+}
+md-dialog-actions > *{
+	flex: 1;
+}

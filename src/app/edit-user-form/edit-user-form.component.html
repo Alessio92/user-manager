@@ -1,0 +1,23 @@
+<form #edituserform="ngForm" class="edit-user-form">
+	<p class="flex">
+		<md-input-container class="full-width">
+			<input type="email"
+			mdInput
+			required
+			placeholder="Email"
+			[(ngModel)]="modifiedUser.email"
+			name="email"
+			pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+		</md-input-container>
+	</p>
+	<p class="flex">
+		<md-input-container class="full-width">
+			<input mdInput required placeholder="First name" [(ngModel)]="modifiedUser.name" name="firstname">
+		</md-input-container>
+		<md-input-container class="full-width">
+			<input mdInput required placeholder="Last name" [(ngModel)]="modifiedUser.surname" name="lastname">
+		</md-input-container>
+	</p>
+
+	<pre *ngIf="false">{{modifiedUser | json }}</pre>
+</form>
