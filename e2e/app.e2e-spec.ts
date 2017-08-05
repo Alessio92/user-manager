@@ -1,10 +1,10 @@
-import { PromanagerWebsitePage } from './app.po';
+import { UserManagerPage } from './app.po';
 
-describe('promanager-website App', () => {
-  let page: PromanagerWebsitePage;
+describe('user-manager App', () => {
+  let page: UserManagerPage;
 
   beforeEach(() => {
-    page = new PromanagerWebsitePage();
+    page = new UserManagerPage();
   });
 
   it('should display welcome message', () => {
