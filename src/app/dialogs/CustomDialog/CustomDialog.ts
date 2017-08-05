@@ -8,7 +8,7 @@ import { BaseDialog, BaseDialogData } from '../BaseDialog';
   styleUrls: ['custom-dialog.component.css']
 })
 export class CustomDialog extends BaseDialog{
-	protected data: CustomDialogData;
+	public data: CustomDialogData;
 
 	constructor(public dialogRef: MdDialogRef<any>,
 		@Inject(MD_DIALOG_DATA) public dialogConfig: MdDialogConfig){

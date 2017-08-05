@@ -27,6 +27,7 @@ import { ListUsersComponent } from './list-users/list-users.component';
   import { BaseDialog } from './dialogs/BaseDialog';
   import { ConfirmDialog } from './dialogs/ConfirmDialog/ConfirmDialog';
   import { EditUserDialog } from './dialogs/EditUserDialog/EditUserDialog';
+  import { CustomDialog } from './dialogs/CustomDialog/CustomDialog';
   // endregion Dialogs */
 // endregion Custom UI Components */
 
@@ -40,7 +41,8 @@ import { AppRouting } from './app-routing/app-routing.component';
     EditUserFormComponent,
     ListUsersComponent,
     ConfirmDialog,
-    EditUserDialog
+    EditUserDialog,
+    CustomDialog
   ],
   imports: [
     BrowserModule,

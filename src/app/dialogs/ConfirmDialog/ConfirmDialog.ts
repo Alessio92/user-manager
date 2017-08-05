@@ -8,7 +8,7 @@ import { BaseDialog, BaseDialogData } from '../BaseDialog';
   styleUrls: ['confirm-dialog.component.css']
 })
 export class ConfirmDialog extends BaseDialog{
-	protected data: ConfirmDialogData;
+	public data: ConfirmDialogData;
 
 	constructor(public dialogRef: MdDialogRef<any>,
 		@Inject(MD_DIALOG_DATA) public dialogConfig: MdDialogConfig){

@@ -11,9 +11,11 @@ import { EditUserFormComponent } from '../../edit-user-form/edit-user-form.compo
 })
 
 export class EditUserDialog extends BaseDialog{
+	public user: User;
+
 	@ViewChild('edituserformcomponent') public edituserform: EditUserFormComponent;
 	
-	protected data: EditUserDialog;
+	public data: EditUserDialog;
 
 	constructor(public dialogRef: MdDialogRef<any>,
 		@Inject(MD_DIALOG_DATA) public dialogConfig: MdDialogConfig){

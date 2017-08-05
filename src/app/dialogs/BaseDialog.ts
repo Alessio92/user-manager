@@ -5,7 +5,7 @@ import { MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA } from '@angular/
 import {} from '@angular/material';
 
 export abstract class BaseDialog{
-	protected data: BaseDialogData;
+	public data: BaseDialogData;
 	constructor(public dialogRef: MdDialogRef<any>,
 		@Inject(MD_DIALOG_DATA) public dialogConfig: MdDialogConfig){
 		this.data = dialogConfig;
